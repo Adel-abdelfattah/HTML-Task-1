@@ -168,7 +168,7 @@ nav div div:hover {
 }
 /* our work */
 .contact-us-bg {
-  background-image: url("/images/the-town-bg-02.jpg");
+  background-image: url("images/the-town-bg-02.jpg");
   background-size: 100% 100%;
   height: 100vh;
   background-attachment: fixed;
