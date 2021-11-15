@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .introduction-item{
+    width: 100% !important;
+  }
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .introduction-item{
+    width: 100% !important;
+  }
+}
+@media screen and (min-width: 768px){
+      
+}
+@media screen and (min-width: 992px) {
+  
+}
+/* start header */
+
+header {
+  background-image: url("/images/the-town-bg-01.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+}
+nav .left{
+  margin: 0 15px;
+}
+nav .right{
+  margin: 0 15px;
+}
+nav a{
+  color: white;
+  margin: 0 10px;
+  font-size: 17px;
+  
+}
+a:hover, .info a:hover{
+  color: darkcyan;
+}
+nav div{
+  display: flex;
+}
+nav div div:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.1, 1.1);
+}
+.header{
+  margin:  25vh 0;
+  text-align: center;
+}
+.header h1, .header h3, .header h4{
+  margin: 10px;
+  color: white;
+}
+.header span {
+  color: white;
+  text-transform: capitalize;
+  font-size: 25px;
+}
+.introduction{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  align-items: center;
+  justify-content: space-between;
+}
+.introduction-item{
+  width: 50%;
+  padding: 15px;
+  margin-bottom: 35px;
+}
+.introduction-item img{
+  width: 100%;
+  margin: auto 0;
+}
+.introduction-item:nth-child(3),.introduction-item:nth-child(4),.introduction-item:nth-child(5){
+  width: 33%;
+}
+.introduction-item:nth-child(2) h3{
+  color: rgba(19, 69, 207, 0.918);
+}
+.introduction-item:nth-child(3) h3,.introduction-item:nth-child(4) h3,.introduction-item:nth-child(5) h3{
+  text-align: center;
+  color: rgba(95, 81, 81, 0.877);
+  margin-bottom: 10px;
+}
+.introduction-item:nth-child(3) h5,.introduction-item:nth-child(4) h5,.introduction-item:nth-child(5) h5{
+  text-align: center;
+  color: rgba(19, 69, 207, 0.918);
+  margin-bottom: 5px;
+}
+.introduction-item:nth-child(5){
+  direction: rtl;
+}
+.introduction-item p{
+  margin: 10px 0;
+  color: rgba(95, 81, 81, 0.877);
+}
+.introduction-item button{
+  color: white;
+  background-color: rgba(19, 69, 207, 0.918);
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 7px 20px;
+  border-radius: 15px;
+}
+.introduction-item:nth-child(2){
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 25px;
+}
+
+/* our work */
+.our-work{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.our-work h2{
+  color: rgba(19, 69, 207, 0.918);
+  margin-bottom: 20px;
+}
+.our-work p{
+  color: rgba(95, 81, 81, 0.877);
+  width: 70%;
+  margin-bottom: 50px;
+}
+
+.our-work .slider{
+  display: flex;
+  overflow: hidden;
+}
+.slider img{
+  /* width: 20%;
+  height: 300px; */
+  margin: 10px 15px;
+}
+/* our work */
+.contact-us-bg {
+  background-image: url("/images/the-town-bg-02.jpg");
+  background-size: 100% 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  overflow: hidden;
+  margin-top: 30px;
+  position: relative;
+}
+.contact-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  
+}
+.contact-us h2{
+  margin-top: 20vh;
+  margin-bottom: 25px;
+  color: white;
+  padding: 20px 0;
+  border-bottom: 1px solid white;
+  box-shadow: 0px 4px 0px 0px #cb252575;
+}
+
+.contact-us p{
+  color: white;
+  line-height: 2;
+  margin: 25px 0;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  margin: 15px 0;
+  align-items: center;
+}
+.info a{
+  font-size: 22px;
+  color: white;
+}
+.info input{
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 25px;
+}
