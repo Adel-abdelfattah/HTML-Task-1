@@ -112,9 +112,6 @@ nav div div:hover {
   color: rgba(19, 69, 207, 0.918);
   margin-bottom: 5px;
 }
-.introduction-item:nth-child(5){
-  direction: rtl;
-}
 .introduction-item p{
   margin: 10px 0;
   color: rgba(95, 81, 81, 0.877);
@@ -127,6 +124,11 @@ nav div div:hover {
   font-size: 18px;
   padding: 7px 20px;
   border-radius: 15px;
+  opacity: .7;
+}
+.introduction-item button:hover{
+  opacity: 1;
+  cursor: pointer;
 }
 .introduction-item:nth-child(2){
   display: flex;
