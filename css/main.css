@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 }
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
 }
 .container {
   max-width: 1170px;
@@ -113,7 +113,7 @@ nav a{
   margin: 0 10px;
   font-size: 17px;
 }
-a:hover, .info a:hover{
+nav .right div:first-of-type a, .info a:hover{
   color: darkcyan;
 }
 nav section{
@@ -190,9 +190,9 @@ header span {
 .introduction-item:nth-child(3),.introduction-item:nth-child(4),.introduction-item:nth-child(5){
   width: 29%;
 }
-.introduction-item:nth-child(2) h3{
-  color: rgba(19, 69, 207, 0.918);
-margin-bottom: 20px;
+.introduction-item:nth-child(2) h2{
+  color: deepskyblue;
+  font-size: 40px;
 }
 .introduction-item:nth-child(3) h2,.introduction-item:nth-child(4) h2,.introduction-item:nth-child(5) h2{
   text-align: center;
@@ -202,24 +202,29 @@ margin-bottom: 20px;
 }
 .introduction-item:nth-child(3) h5,.introduction-item:nth-child(4) h5,.introduction-item:nth-child(5) h5{
   text-align: center;
-  color: rgba(19, 69, 207, 0.918);
-  margin-bottom: 5px;
+  color: deepskyblue;
+  margin-top: 5px;
+  font-size: 15px;
 }
 .introduction-item p{
   margin-top: 35px;
   color: rgba(95, 81, 81, 0.877);
   line-height: 1.8;
 }
+.introduction-item:nth-of-type(1) p{
+  margin-top: 15px;
+  
+}
 .introduction-item button{
   color: white;
-  background-color: rgba(19, 69, 207, 0.918);
+  background-color: rgb(9, 161, 212);
   outline: none;
   border: none;
   margin-top: 15px;
   font-size: 18px;
-  padding: 7px 20px;
-  border-radius: 15px;
-  opacity: .7;
+  padding: 10px 30px;
+  border-radius: 20px;
+  opacity: .8;
 }
 .introduction-item button:hover{
   opacity: 1;
@@ -231,7 +236,7 @@ margin-bottom: 20px;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-left: 25px;
 }
 /******************* introduction *********************/  
@@ -249,7 +254,7 @@ margin-bottom: 20px;
   overflow-x: hidden;
 }
 .our-work h2{
-  color: rgba(19, 69, 207, 0.918);
+  color: deepskyblue;
   margin-bottom: 20px;
   font-size: 30px;
 }
@@ -333,6 +338,7 @@ margin-bottom: 20px;
   margin: 15px 0;
   align-items: center;
   flex-wrap: wrap;
+  color: white;
 }
 .info a{
   font-size: 22px;
@@ -344,7 +350,11 @@ margin-bottom: 20px;
   border-radius: 5px;
   margin: 10px;
   outline: none;
-  border: none;
+  border: 1px solid white;
+  background: none;
+}
+input::placeholder{
+  color: white;
 }
 .info input[type= submit]{
   cursor: pointer;
