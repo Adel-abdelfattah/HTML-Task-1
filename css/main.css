@@ -181,17 +181,18 @@ header span {
 .introduction-item{
   width: 50%;
   padding: 15px;
-  margin-bottom: 35px;
+  margin-bottom: 100px;
 }
 .introduction-item img{
   width: 100%;
   margin: auto 0;
 }
 .introduction-item:nth-child(3),.introduction-item:nth-child(4),.introduction-item:nth-child(5){
-  width: 33%;
+  width: 29%;
 }
 .introduction-item:nth-child(2) h3{
   color: rgba(19, 69, 207, 0.918);
+margin-bottom: 20px;
 }
 .introduction-item:nth-child(3) h3,.introduction-item:nth-child(4) h3,.introduction-item:nth-child(5) h3{
   text-align: center;
@@ -206,12 +207,14 @@ header span {
 .introduction-item p{
   margin: 10px 0;
   color: rgba(95, 81, 81, 0.877);
+  text-align: center;
 }
 .introduction-item button{
   color: white;
   background-color: rgba(19, 69, 207, 0.918);
   outline: none;
   border: none;
+  margin-top: 15px;
   font-size: 18px;
   padding: 7px 20px;
   border-radius: 15px;
@@ -227,7 +230,7 @@ header span {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   padding-left: 25px;
 }
 /******************* introduction *********************/  
