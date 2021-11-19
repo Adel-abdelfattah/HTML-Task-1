@@ -13,31 +13,89 @@ body {
   max-width: 1170px;
   margin: 0 auto;
 }
+
+/*************** MEDIA QUIRIES ******************/
 @media screen and (max-width: 600px) {
   .introduction-item{
     width: 100% !important;
   }
+  nav a{
+    font-size: 15px !important;
+  }
+  .info .left{
+    width: 100%;
+    text-align: center;
+    margin: 15px auto;
+  }
+  .info .right{
+    margin: 10px auto;
+  }
+  .svg:nth-of-type(2), .svg:nth-of-type(3){
+    display: none;
+  }
+  
 }
 @media (min-width: 600px) and (max-width: 768px) {
   .introduction-item{
     width: 100% !important;
   }
+  .info .left{
+    width: 100%;
+    text-align: center;
+    margin: 15px auto;
+  }
+  .info .right{
+    margin: 10px auto;
+  }
+  .svg:nth-of-type(2), .svg:nth-of-type(3){
+    display: none;
+  }
 }
 @media screen and (min-width: 768px){
-      
+  .svg:nth-of-type(3){
+    display: none;
+  }  
+  .svg:nth-of-type(2){
+    left: 50vw !important;
+  }  
 }
 @media screen and (min-width: 992px) {
-  
+  .svg:nth-of-type(1){
+    left: 5vw !important;
+  } 
+  .svg:nth-of-type(2){
+    left: 38vw !important;
+  }   
+  .svg:nth-of-type(3){
+    left: 70vw !important;
+    display: block !important;
+  }
 }
-/* start header */
+/*************** MEDIA QUIRIES ******************/
 
-header {
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/*************** background ******************/
+.back-ground{
   background-image: url(../images/the-town-bg-01.jpg);
   background-size: 100% 100%;
   height: 100vh;
   background-attachment: fixed;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
+/*************** background ******************/
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*************** nav ******************/
 nav{
   display: flex;
   justify-content: space-between;
@@ -54,31 +112,64 @@ nav a{
   color: white;
   margin: 0 10px;
   font-size: 17px;
-  
 }
 a:hover, .info a:hover{
   color: darkcyan;
 }
-nav div{
+nav section{
   display: flex;
 }
-nav div div:hover {
+nav section div:hover {
   transition: all .2s ease-in-out;
   transform: scale(1.1, 1.1);
 }
-.header{
-  margin:  25vh 0;
+/*************** nav ******************/
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/******************* header *********************/
+header{
+  padding-top: 25vh;
   text-align: center;
+  height: 95vh;
+  
 }
-.header h1, .header h3, .header h4{
+header h1, header h3, header h4{
   margin: 10px;
   color: white;
 }
-.header span {
+header span {
   color: white;
   text-transform: capitalize;
   font-size: 25px;
 }
+.svg{
+  position: absolute;
+  left: 10vw;
+  top: 65vh;
+  animation: move-up 2s linear infinite alternate;
+}
+
+
+@keyframes move-up {
+  from{
+    top: 80vh;
+  }
+  to{
+    top: 77vh;
+  }
+}
+/******************* header *********************/
+
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+                                                   /******************* MAIN *********************/
+
+
+/******************* introduction *********************/                                                   
 .introduction{
   display: flex;
   justify-content: flex-start;
@@ -139,40 +230,43 @@ nav div div:hover {
   align-items: flex-start;
   padding-left: 25px;
 }
+/******************* introduction *********************/  
 
-/* our work */
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/******************* OUR WORK *********************/  
 .our-work{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
   align-items: center;
-  margin-top: 25px;
+  margin-top: 45px;
+  overflow-x: hidden;
 }
 .our-work h2{
   color: rgba(19, 69, 207, 0.918);
   margin-bottom: 20px;
+  font-size: 30px;
 }
 .our-work p{
   color: rgba(95, 81, 81, 0.877);
   width: 70%;
   margin-bottom: 50px;
 }
-
 .our-work .slider{
   display: flex;
   overflow: hidden;
   width: 1250px;
   /* position: relative; */
 }
-
 .slider img{
  position: relative;
   margin: 10px 15px;
-  animation: fffff 10s  linear none infinite;
+  animation: slide 10s  linear none infinite;
   border-radius: 5px;
 }
-@keyframes fffff {
+@keyframes slide {
   0%{left: 0;}
   20%{left: -250px}
   40%{left: -500px;}
@@ -185,8 +279,11 @@ nav div div:hover {
   box-shadow: 0px 0px 5px 1px #4c2f167a;
   cursor: pointer;
 }
+/******************* OUR WORK *********************/  
 
-/* our work */
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+
+/******************* CONTACT US *********************/  
 .contact-us-bg {
   background-image: url(../images/the-town-bg-02.jpg);
   background-size: 100% 100%;
@@ -194,7 +291,9 @@ nav div div:hover {
   background-attachment: fixed;
   overflow: hidden;
   margin-top: 30px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .contact-us{
   display: flex;
@@ -228,6 +327,7 @@ nav div div:hover {
   padding: 0 5%;
   margin: 15px 0;
   align-items: center;
+  flex-wrap: wrap;
 }
 .info a{
   font-size: 22px;
@@ -237,14 +337,46 @@ nav div div:hover {
   padding: 10px;
   font-size: 15px;
   border-radius: 5px;
+  margin: 10px;
   outline: none;
   border: none;
 }
+.info input[type= submit]{
+  cursor: pointer;
+  background-color: rgba(19, 69, 207, 0.918);
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 7px 20px;
+  
+}
+.info input[type= submit]:hover{
+  color: white;
+}
+/******************* CONTACT US *********************/  
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* --------- back to top ---------*/
+.top{
+  position: fixed;
+  right: 20px;
+  bottom: 15px;
+  font-size: 60px;
+  z-index: 10;
+  color: rgb(223, 58, 58);
+}
+.top:hover{
+  color: rgb(238, 109, 109);
+  transform: scale(1.5, 1.5);
+}
+/* --------- back to top ---------*/
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/*-----------------  FOOTER ------------------------ */
 footer{
-  position: absolute;
-  bottom: 0;
   color: white;
   width: 100%;
   text-align: center;
   margin: 25px;
 }
+/*-----------------  FOOTER ------------------------ */
