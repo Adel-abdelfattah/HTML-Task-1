@@ -136,14 +136,20 @@ header{
   height: 95vh;
   
 }
-header h1, header h3, header h4{
+header h1, header h4, header h4{
   margin: 10px;
   color: white;
+  text-shadow: 0px 5px 5px #805c5c;
+}
+header h1{
+  font-size: 60px;
+  text-shadow: 0px 5px 5px #805c5c;
 }
 header span {
   color: white;
   text-transform: capitalize;
-  font-size: 25px;
+  font-size: 20px;
+  text-shadow: 0px 5px 5px #805c5c;
 }
 .svg{
   position: absolute;
